@@ -2,6 +2,7 @@ import { IoHomeOutline, IoNotificationsOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { SidebarLogo } from "./layout/SidebarLogo";
 import { SidebarLinks } from "./layout/SidebarLinks";
+import {} from "react-icons";
 
 const Sidebar = () => {
   //Nav links
@@ -39,6 +40,12 @@ const Sidebar = () => {
               icon={links.icon}
             />
           ))}
+          <SidebarLinks
+            onClick={() => {
+              alert("You clicked");
+            }}
+            icon={}
+          />
         </div>
       </div>
     </div>
