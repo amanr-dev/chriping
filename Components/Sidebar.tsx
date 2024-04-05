@@ -1,6 +1,7 @@
 import { IoHomeOutline, IoNotificationsOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { SidebarLogo } from "./layout/SidebarLogo";
+import { SidebarLinks } from "./layout/SidebarLinks";
 
 const Sidebar = () => {
   //Nav links
@@ -30,6 +31,14 @@ const Sidebar = () => {
       <div className="flex flex-col items-end">
         <div className="space-y-2 lg:w-[222px]">
           <SidebarLogo />
+          {navLinks.map((links) => (
+            <SidebarLinks
+              key={links.label}
+              href={links.href}
+              label={links.label}
+              icon={links.icon}
+            />
+          ))}
         </div>
       </div>
     </div>

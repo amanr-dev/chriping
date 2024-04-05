@@ -6,7 +6,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="h-screen max-w-[1000px] mx-auto bg-slate-900 w-full">
+    <div className="h-screen max-w-[1000px] mx-auto bg-main w-full">
       <div className="container h-full mx-auto xl:px-30 max-w-6xl">
         <div className="grid grid-cols-4 h-full">
           <Sidebar />

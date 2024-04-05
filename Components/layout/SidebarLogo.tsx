@@ -11,7 +11,7 @@ export const SidebarLogo = () => {
     <div
       onClick={() => router.push("/")}
       className="
-  rounded-full h-14 w-14 p-4 flex items-center justify-center hover:bg-blue-300 hover:bg-opacity-10  cursor-pointer transition text-slate-50 hover:text-blue-50
+  rounded-full h-14 w-14 p-4 flex items-center justify-center hover:bg-secondary hover:bg-opacity-10  cursor-pointer transition text-primary hover:text-primary
   "
     >
       <PiTwitterLogo size={28} />

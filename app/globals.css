@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  @apply h-full bg-slate-900;
+  @apply h-full bg-main;
 }
 
 body {
-  @apply h-full bg-slate-900;
+  @apply h-full bg-main;
 }
