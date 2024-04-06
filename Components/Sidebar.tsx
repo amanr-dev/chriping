@@ -3,6 +3,7 @@ import { CgProfile } from "react-icons/cg";
 import { SidebarLogo } from "./layout/SidebarLogo";
 import { SidebarLinks } from "./layout/SidebarLinks";
 import { CiLogout } from "react-icons/ci";
+import { SidebarTweetButton } from "./layout/SidebarTweetButton";
 
 const Sidebar = () => {
   //Nav links
@@ -47,6 +48,7 @@ const Sidebar = () => {
             icon={CiLogout}
             label="Logout"
           />
+          <SidebarTweetButton />
         </div>
       </div>
     </div>
