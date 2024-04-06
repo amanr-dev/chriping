@@ -29,7 +29,7 @@ export const RightSidebar = () => {
         />
       </div>
       <div className="w-full h-[1px] bg-slate-800 my-4" />
-      <div className="w-full flex items-start justify-start flex-col text-primary capitalize gap-2 text-xl">
+      <div className="w-full flex items-start justify-start flex-col text-primary capitalize gap-2 text-base">
         {links.map((link) => (
           <Link href={link.href} key={link.label}>
             {link.label}
@@ -38,7 +38,7 @@ export const RightSidebar = () => {
       </div>
       <div className="w-full h-[1px] bg-slate-800 my-4" />
       <div className="bg-slate-800 rounded-xl p-4 mt-6">
-        <h2 className="text-primary text-xl font-semibold">Who to Follow</h2>
+        <h2 className="text-primary text-base font-semibold">Who to Follow</h2>
         <div className="flex flex-col gap-6 mt-4"></div>
       </div>
     </div>
