@@ -17,16 +17,19 @@ export const SidebarTweetButton = () => {
       </div>
       <div
         className="
-      mt-6 hidden lg:block px-4 py-2 rounded-full bg-secondary hover:opacity-90 cursor-pointer transition
+      mt-6 hidden lg:block px-3 py-2 rounded-full bg-secondary hover:opacity-90 cursor-pointer transition
       "
       >
-        <p
-          className="
-          hidden lg:block text-center font-semibold text-primary text-[18px]
+        <div className="flex items-center justify-center flex-row w-full gap-4">
+          <FaFeather size={24} />
+          <p
+            className="
+          hidden lg:block text-center font-semibold text-slate-900 text-[18px]
           "
-        >
-          Write
-        </p>
+          >
+            Write
+          </p>
+        </div>
       </div>
     </div>
   );
