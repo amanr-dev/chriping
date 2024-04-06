@@ -1,7 +1,8 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React from "react";
-import { PiTwitterLogo } from "react-icons/pi";
+import { FaTwitter } from "react-icons/fa";
+// import { PiTwitterLogo } from "react-icons/pi";
 
 export const SidebarLogo = () => {
   const router = useRouter();
@@ -11,10 +12,10 @@ export const SidebarLogo = () => {
     <div
       onClick={() => router.push("/")}
       className="
-  rounded-full h-14 w-14 p-4 flex items-center justify-center hover:bg-secondary hover:bg-opacity-10  cursor-pointer transition text-primary hover:text-primary
+  rounded-full h-14 w-14 p-4 flex items-center justify-center hover:bg-secondary hover:bg-opacity-10  cursor-pointer transition text-secondary  
   "
     >
-      <PiTwitterLogo size={28} />
+      <FaTwitter size={28} />
     </div>
   );
 };

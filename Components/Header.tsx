@@ -29,8 +29,8 @@ export const Header: React.FC<HeaderProps> = ({ label, showBackButton }) => {
         )}
         <h1 className="text-primary text-xl font-semibold">{label}</h1>
       </div>
-      <div className="w-full flex items-center justify-center text-primary">
-        <FaTwitter />
+      <div className="w-full flex items-center justify-center text-secondary">
+        <FaTwitter size={28} />
       </div>
     </div>
   );
