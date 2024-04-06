@@ -2,7 +2,7 @@ import { IoHomeOutline, IoNotificationsOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { SidebarLogo } from "./layout/SidebarLogo";
 import { SidebarLinks } from "./layout/SidebarLinks";
-import {} from "react-icons";
+import { CiLogout } from "react-icons/ci";
 
 const Sidebar = () => {
   //Nav links
@@ -44,7 +44,8 @@ const Sidebar = () => {
             onClick={() => {
               alert("You clicked");
             }}
-            icon={}
+            icon={CiLogout}
+            label="Logout"
           />
         </div>
       </div>
