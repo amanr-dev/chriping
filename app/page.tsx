@@ -1,5 +1,7 @@
+import { Header } from "@/Components/Header";
+
 const page = () => {
-  return <div className="text-3xl text-primary">My App</div>;
+  return <Header />;
 };
 
 export default page;
