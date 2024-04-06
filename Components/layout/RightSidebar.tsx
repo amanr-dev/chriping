@@ -1,5 +1,5 @@
 import React from "react";
 
-export const FollowBar = () => {
+export const RightSidebar = () => {
   return <div>FollowBar</div>;
 };
