@@ -7,14 +7,14 @@ interface ButtonProps {
   secondary?: boolean;
   fullWidth?: boolean;
   large?: boolean;
-  onclick?: () => void;
+  onClick?: () => void;
   disabled?: boolean;
   outline?: boolean;
 }
 
 export const Button: React.FC<ButtonProps> = ({
   label,
-  onclick: onClick,
+  onClick,
   fullWidth,
   large,
   disabled,

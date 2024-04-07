@@ -1,3 +1,4 @@
+"use client";
 import React, { useCallback } from "react";
 import { AiOutlineClose, AiOutlineCloseCircle } from "react-icons/ai";
 import { Button } from "./Button";
