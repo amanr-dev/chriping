@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { FaSearch } from "react-icons/fa";
+import { Input } from "../Input";
 
 const links = [
   {
@@ -22,11 +23,12 @@ export const RightSidebar = () => {
     <div className="px-6 py-4 hidden lg:block">
       <div className="rounded-full bg-slate-800 w-full flex items-center px-2 py-1 justify-center text-primary">
         <FaSearch />
-        <input
+        {/* <input
           type="text"
           className="w-full rounded-full bg-slate-800 px-2 py-1 text-primary outline-none"
           placeholder="Search"
-        />
+        /> */}
+        <Input placeholder="Search..." type="text" border={false} />
       </div>
       <div className="w-full h-[1px] bg-slate-800 my-4" />
       <div className="w-full flex items-start justify-start flex-col text-primary capitalize gap-2 text-base">
