@@ -103,6 +103,7 @@ h-full lg:h-auto border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-
               large
               onClick={handleSubmit}
             />
+            {footer}
           </div>
         </div>
       </div>
