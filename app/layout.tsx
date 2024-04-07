@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Layout from "@/Components/layout/Layout";
 import { Modal } from "@/Components/Modal";
+import { LoginModal } from "@/Components/modals/LoginModal";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Layout>
           {/* <Modal actionLabel="Submit" isOpen title="Open Modal" /> */}
+          <LoginModal />
           {children}
         </Layout>
       </body>
