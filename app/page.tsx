@@ -1,7 +1,7 @@
 import { Header } from "@/Components/Header";
 
 const page = () => {
-  return <Header label="Home" />;
+  return <Header />;
 };
 
 export default page;
