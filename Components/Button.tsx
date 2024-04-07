@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 interface ButtonProps {
@@ -5,14 +7,14 @@ interface ButtonProps {
   secondary?: boolean;
   fullWidth?: boolean;
   large?: boolean;
-  onClick: () => void;
+  onclick?: () => void;
   disabled?: boolean;
   outline?: boolean;
 }
 
 export const Button: React.FC<ButtonProps> = ({
   label,
-  onClick,
+  onclick: onClick,
   fullWidth,
   large,
   disabled,
