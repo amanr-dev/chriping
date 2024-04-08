@@ -4,10 +4,11 @@ import React, { useCallback, useState } from "react";
 import { Input } from "../Input";
 import { Modal } from "../Modal";
 import useRegisterModal from "@/hooks/useRegisterModal";
+import useLoginModal from "@/hooks/useLoginModal";
 
 export const RegisterModal = () => {
   const registerModal = useRegisterModal();
-  const loginModal = useRegisterModal();
+  const loginModal = useLoginModal();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -15,13 +16,14 @@ export const RegisterModal = () => {
   const [isLoding, setIsLoding] = useState(false);
 
   const toggleModal = useCallback(() => {
-    // if (isLoding) {
+    if (!isLoding) {
+      registerModal.onClose();
+      loginModal.onOpen();
+    }
+    // if (!isLoding && loginModal.isOpen) {
     //   return;
     // }
-    console.log("toggle");
-
-    registerModal.onClose();
-    loginModal.onOpen();
+    // console.log(registerModal.isOpen, loginModal.isOpen);
   }, [isLoding, registerModal, loginModal]);
 
   const onSubmit = useCallback(async () => {
