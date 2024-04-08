@@ -70,7 +70,7 @@ export const RegisterModal = () => {
       <p className="">
         Already have an account?
         <span
-          onClick={toggleModal}
+          onClick={() => toggleModal()}
           className="text-secondary cursor-pointer hover:underline"
         >
           {" "}
