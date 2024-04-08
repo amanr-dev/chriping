@@ -8,17 +8,17 @@ import useRegisterModal from "@/hooks/useRegisterModal";
 export const RegisterModal = () => {
   const registerModal = useRegisterModal();
   const loginModal = useRegisterModal();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [isLoding, setIsLoding] = useState(false);
 
-  const toggleModal = useCallback(async () => {
-    if (isLoding) {
-      return;
-    }
+  const toggleModal = useCallback(() => {
+    // if (isLoding) {
+    //   return;
+    // }
+    console.log("toggle");
 
     registerModal.onClose();
     loginModal.onOpen();
@@ -70,7 +70,7 @@ export const RegisterModal = () => {
       <p className="">
         Already have an account?
         <span
-          onClick={() => toggleModal()}
+          onClick={toggleModal}
           className="text-secondary cursor-pointer hover:underline"
         >
           {" "}
