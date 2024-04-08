@@ -20,10 +20,6 @@ export const RegisterModal = () => {
       registerModal.onClose();
       loginModal.onOpen();
     }
-    // if (!isLoding && loginModal.isOpen) {
-    //   return;
-    // }
-    // console.log(registerModal.isOpen, loginModal.isOpen);
   }, [isLoding, registerModal, loginModal]);
 
   const onSubmit = useCallback(async () => {
