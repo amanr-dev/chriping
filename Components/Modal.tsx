@@ -24,6 +24,7 @@ export const Modal: React.FC<ModalProps> = ({
   isOpen,
   title,
 }) => {
+  // Close modal
   const handleClose = useCallback(() => {
     if (disabled) {
       return;
@@ -32,6 +33,7 @@ export const Modal: React.FC<ModalProps> = ({
     onClose();
   }, [disabled, onClose]);
 
+  // Submit function
   const handleSubmit = useCallback(() => {
     if (disabled) {
       return;
@@ -47,18 +49,18 @@ export const Modal: React.FC<ModalProps> = ({
   return (
     <div
       className="
-  justify-center
-  items-center 
-  flex
-  overflow-x-hidden
-  overflow-y-auto
-  fixed
-  inset-0
-  z-50
-  outline-none
-  focus:outline-none
-  bg-slate-800
-  bg-opacity-70
+            justify-center
+            items-center 
+            flex
+            overflow-x-hidden
+            overflow-y-auto
+            fixed
+            inset-0
+            z-50
+            outline-none
+            focus:outline-none
+            bg-slate-800
+            bg-opacity-70
   "
     >
       <div

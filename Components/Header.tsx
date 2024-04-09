@@ -15,9 +15,11 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ label, showBackButton }) => {
   const router = useRouter();
 
+  // Navigate back
   const handleBack = useCallback(() => {
     router.back();
   }, [router]);
+
   return (
     <div className="border-b-[1px] border-slate-800 p-5 flex items-center justify-center">
       <div className="flex flex-row items-center gap-2 relative w-full">

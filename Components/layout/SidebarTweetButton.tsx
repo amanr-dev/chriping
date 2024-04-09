@@ -8,6 +8,7 @@ import { FaFeather } from "react-icons/fa";
 export const SidebarTweetButton = () => {
   const loginModal = useLoginModal();
 
+  // Toggle modal function
   const toggleModal = useCallback(() => {
     loginModal.onOpen();
   }, [loginModal]);

@@ -13,6 +13,7 @@ export const LoginModal = () => {
   const [password, setPassword] = useState("");
   const [isLoding, setIsLoding] = useState(false);
 
+  // Toggle modal
   const toggleModal = useCallback(() => {
     if (!isLoding) {
       loginModal.onClose();
@@ -20,6 +21,7 @@ export const LoginModal = () => {
     }
   }, [isLoding, registerModal, loginModal]);
 
+  // Handle submit
   const onSubmit = useCallback(async () => {
     try {
       setIsLoding(true);
@@ -32,6 +34,7 @@ export const LoginModal = () => {
     }
   }, [loginModal]);
 
+  // Modal body content
   const bodyContent = (
     <div className="flex flex-col gap-4 ">
       <Input
@@ -49,6 +52,7 @@ export const LoginModal = () => {
     </div>
   );
 
+  // Modal footer content
   const footerContent = (
     <div className="text-primary text-center mt-4">
       <p className="">

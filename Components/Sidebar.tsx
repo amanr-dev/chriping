@@ -6,7 +6,7 @@ import { CiLogout } from "react-icons/ci";
 import { SidebarTweetButton } from "./layout/SidebarTweetButton";
 
 const Sidebar = () => {
-  //Nav links
+  //Sidebar links
   const navLinks = [
     {
       label: "Home",
@@ -25,6 +25,7 @@ const Sidebar = () => {
       icon: CgProfile,
     },
   ];
+
   return (
     <div
       className="col-span-1 h-full pr-4
