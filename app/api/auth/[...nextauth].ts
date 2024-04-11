@@ -27,6 +27,17 @@ export default NextAuth({
         if (!user || !user?.hashedPassword) {
           throw new Error("Invalid Credentials");
         }
+
+        const isCorrectPassword = await bcrypt.compare(
+          credentials.password,
+          user.hashedPassword
+        );
+
+        if (!isCorrectPassword) {
+          throw new Error("Invalid Password");
+        }
+
+        return user;
       },
     }),
   ],
