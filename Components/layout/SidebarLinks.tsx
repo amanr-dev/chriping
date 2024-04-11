@@ -14,7 +14,7 @@ export const SidebarLinks: React.FC<SidebarLinksProps> = ({
   onClick,
 }) => {
   return (
-    <div className="flex flex-row items-center">
+    <div className="flex flex-row items-center w-full">
       <div className="relative rounded-full h-14 w-14 flex items-center justify-center p-4 hover:bg-opacity-10 cursor-pointer lg:hidden text-primary">
         <Icon size={28} />
       </div>
@@ -26,7 +26,7 @@ export const SidebarLinks: React.FC<SidebarLinksProps> = ({
       items-center
       gap-4
       p-4 rounded-full hover:bg-secondary hover:bg-opacity-10 cursor-pointer 
-
+w-full
       "
       >
         <Icon size={24} className="text-primary" />
