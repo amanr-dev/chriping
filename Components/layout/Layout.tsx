@@ -1,3 +1,4 @@
+import { Header } from "../Header";
 import Sidebar from "../Sidebar";
 import { RightSidebar } from "./RightSidebar";
 
@@ -12,6 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="grid grid-cols-4 h-full">
           <Sidebar />
           <div className="col-span-3 lg:col-span-2 border-x-[1px] border-x-slate-800">
+            <Header />
             {children}
           </div>
           <RightSidebar />

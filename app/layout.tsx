@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Chirping Social App",
-  description: "A social media app for chirping social persons",
+  description: "A social media app for chirping social birds",
 };
 
 export default function RootLayout({

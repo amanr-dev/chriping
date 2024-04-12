@@ -1,7 +1,5 @@
-import { Header } from "@/Components/Header";
-
 const page = () => {
-  return <Header />;
+  return;
 };
 
 export default page;
