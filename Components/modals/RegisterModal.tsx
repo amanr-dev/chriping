@@ -5,6 +5,7 @@ import { Input } from "../Input";
 import { Modal } from "../Modal";
 import useRegisterModal from "@/hooks/useRegisterModal";
 import useLoginModal from "@/hooks/useLoginModal";
+import axios from "axios";
 
 export const RegisterModal = () => {
   const registerModal = useRegisterModal();
@@ -25,6 +26,13 @@ export const RegisterModal = () => {
   const onSubmit = useCallback(async () => {
     try {
       setIsLoding(true);
+
+      await axios.post("/api/register", {
+        name,
+        username,
+        email,
+        password,
+      });
 
       registerModal.onClose();
     } catch (error) {
