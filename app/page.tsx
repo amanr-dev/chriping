@@ -1,5 +1,5 @@
 const page = () => {
-  return;
+  return "Suxxy Baka";
 };
 
 export default page;

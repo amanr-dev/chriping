@@ -2,9 +2,10 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Layout from "@/Components/layout/Layout";
-import { Modal } from "@/Components/Modal";
 import { LoginModal } from "@/Components/modals/LoginModal";
 import { RegisterModal } from "@/Components/modals/RegisterModal";
+import { Toaster } from "react-hot-toast";
+import SessionWrapper from "@/Components/SessionWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,12 +22,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Layout>
-          {/* <Modal actionLabel="Submit" isOpen title="Open Modal" /> */}
-          <LoginModal />
-          <RegisterModal />
-          {children}
-        </Layout>
+        <SessionWrapper>
+          <Layout>
+            <Toaster position="top-right" />
+            <LoginModal />
+            <RegisterModal />
+            {children}
+          </Layout>
+        </SessionWrapper>
       </body>
     </html>
   );
