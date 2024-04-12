@@ -49,6 +49,7 @@ export const RegisterModal = () => {
         onChange={(e) => setName(e.target.value)}
         value={name}
         disabled={isLoding}
+        type={"text"}
       />
       <Input
         placeholder="Username"
@@ -61,19 +62,21 @@ export const RegisterModal = () => {
         onChange={(e) => setEmail(e.target.value)}
         value={email}
         disabled={isLoding}
+        type={"email"}
       />
       <Input
         placeholder="Password"
         onChange={(e) => setPassword(e.target.value)}
         value={password}
         disabled={isLoding}
+        type={"password"}
       />
     </div>
   );
 
   const footerContent = (
     <div className="text-primary text-center mt-4">
-      <p className="">
+      <p className="w-full">
         Already have an account?
         <span
           onClick={toggleModal}

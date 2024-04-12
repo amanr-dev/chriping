@@ -42,12 +42,14 @@ export const LoginModal = () => {
         onChange={(e) => setEmail(e.target.value)}
         value={email}
         disabled={isLoding}
+        type={"email"}
       />
       <Input
         placeholder="Password"
         onChange={(e) => setPassword(e.target.value)}
         value={password}
         disabled={isLoding}
+        type={"password"}
       />
     </div>
   );
