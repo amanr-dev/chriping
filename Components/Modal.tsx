@@ -103,7 +103,7 @@ h-full lg:h-auto border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-
               secondary
               fullWidth
               large
-              onClick={handleSubmit}
+              onClick={() => handleSubmit()}
             />
             {footer}
           </div>

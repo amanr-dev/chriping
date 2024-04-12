@@ -6,6 +6,8 @@ import { Modal } from "../Modal";
 import useRegisterModal from "@/hooks/useRegisterModal";
 import useLoginModal from "@/hooks/useLoginModal";
 import axios from "axios";
+import toast from "react-hot-toast";
+import { signIn } from "next-auth/react";
 
 export const RegisterModal = () => {
   const registerModal = useRegisterModal();
@@ -24,22 +26,31 @@ export const RegisterModal = () => {
   }, [isLoding, registerModal, loginModal]);
 
   const onSubmit = useCallback(async () => {
-    try {
-      setIsLoding(true);
+    // try {
+    //   setIsLoding(true);
 
-      await axios.post("/api/register", {
-        name,
-        username,
-        email,
-        password,
-      });
+    //   await axios.post("/api/register", {
+    //     name,
+    //     username,
+    //     email,
+    //     password,
+    //   });
 
-      registerModal.onClose();
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setIsLoding(false);
-    }
+    //   toast.success("Account created successfully!");
+    //   signIn("credentials", {
+    //     email,
+    //     password,
+    //   });
+
+    //   registerModal.onClose();
+    // } catch (error) {
+    //   console.log(error);
+    //   toast.error("Some error occurred. Please try again.");
+    // } finally {
+    //   setIsLoding(false);
+    // }
+
+    console.log("hello world");
   }, [registerModal]);
 
   const bodyContent = (
@@ -95,7 +106,7 @@ export const RegisterModal = () => {
       title="Create an Account"
       actionLabel="Sign Up"
       onClose={registerModal.onClose}
-      onSubmit={onSubmit}
+      onSubmit={() => onSubmit()}
       body={bodyContent}
       footer={footerContent}
     />
