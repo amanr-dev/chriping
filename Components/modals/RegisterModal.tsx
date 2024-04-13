@@ -25,7 +25,7 @@ export const RegisterModal = () => {
     }
   }, [isLoding, registerModal, loginModal]);
 
-  const onSubmit = useCallback(async () => {
+  const onSubmit = useCallback(() => {
     // try {
     //   setIsLoding(true);
 
@@ -106,7 +106,7 @@ export const RegisterModal = () => {
       title="Create an Account"
       actionLabel="Sign Up"
       onClose={registerModal.onClose}
-      onSubmit={() => onSubmit()}
+      onSubmit={onSubmit}
       body={bodyContent}
       footer={footerContent}
     />

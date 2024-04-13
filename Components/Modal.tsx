@@ -38,6 +38,7 @@ export const Modal: React.FC<ModalProps> = ({
     if (disabled) {
       return;
     }
+    console.log("Suxxy baka");
 
     onSubmit();
   }, [disabled, onSubmit]);
@@ -80,9 +81,7 @@ h-full lg:h-auto border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-
             <button
               onClick={handleClose}
               className="
-            p-1 ml-auto border-0 text-primary hover:opacity-70 transition
-            
-            "
+            p-1 ml-auto border-0 text-primary hover:opacity-70 transition"
             >
               <AiOutlineClose size={20} />
             </button>
@@ -103,7 +102,7 @@ h-full lg:h-auto border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-
               secondary
               fullWidth
               large
-              onClick={() => handleSubmit()}
+              onClick={handleSubmit}
             />
             {footer}
           </div>
