@@ -25,32 +25,32 @@ export const RegisterModal = () => {
     }
   }, [isLoding, registerModal, loginModal]);
 
-  const onSubmit = useCallback(() => {
-    // try {
-    //   setIsLoding(true);
+  const onSubmit = useCallback(async () => {
+    try {
+      setIsLoding(true);
 
-    //   await axios.post("/api/register", {
-    //     name,
-    //     username,
-    //     email,
-    //     password,
-    //   });
+      await axios.post("/api/register", {
+        name,
+        username,
+        email,
+        password,
+      });
 
-    //   toast.success("Account created successfully!");
-    //   signIn("credentials", {
-    //     email,
-    //     password,
-    //   });
+      toast.success("Account created successfully!");
+      signIn("credentials", {
+        email,
+        password,
+      });
 
-    //   registerModal.onClose();
-    // } catch (error) {
-    //   console.log(error);
-    //   toast.error("Some error occurred. Please try again.");
-    // } finally {
-    //   setIsLoding(false);
-    // }
+      registerModal.onClose();
+    } catch (error) {
+      console.log(error);
+      toast.error("Some error occurred. Please try again.");
+    } finally {
+      setIsLoding(false);
+    }
 
-    console.log("hello world");
+    // console.log("hello world");
   }, [registerModal]);
 
   const bodyContent = (
@@ -61,12 +61,14 @@ export const RegisterModal = () => {
         value={name}
         disabled={isLoding}
         type={"text"}
+        outline={true}
       />
       <Input
         placeholder="Username"
         onChange={(e) => setUsername(e.target.value)}
         value={username}
         disabled={isLoding}
+        outline={true}
       />
       <Input
         placeholder="Email"
@@ -74,6 +76,7 @@ export const RegisterModal = () => {
         value={email}
         disabled={isLoding}
         type={"email"}
+        outline={true}
       />
       <Input
         placeholder="Password"
@@ -81,6 +84,7 @@ export const RegisterModal = () => {
         value={password}
         disabled={isLoding}
         type={"password"}
+        outline={true}
       />
     </div>
   );
@@ -94,7 +98,7 @@ export const RegisterModal = () => {
           className="text-secondary cursor-pointer hover:underline"
         >
           {" "}
-          Sign in
+          Log In
         </span>
       </p>
     </div>

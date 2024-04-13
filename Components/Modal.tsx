@@ -38,7 +38,7 @@ export const Modal: React.FC<ModalProps> = ({
     if (disabled) {
       return;
     }
-    console.log("Suxxy baka");
+    // console.log("Suxxy baka");
 
     onSubmit();
   }, [disabled, onSubmit]);

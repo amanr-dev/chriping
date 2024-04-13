@@ -43,6 +43,7 @@ export const LoginModal = () => {
         value={email}
         disabled={isLoding}
         type={"email"}
+        outline={true}
       />
       <Input
         placeholder="Password"
@@ -50,6 +51,7 @@ export const LoginModal = () => {
         value={password}
         disabled={isLoding}
         type={"password"}
+        outline={true}
       />
     </div>
   );
@@ -64,7 +66,7 @@ export const LoginModal = () => {
           className="text-secondary cursor-pointer hover:underline"
         >
           {" "}
-          Login
+          Sign Up
         </span>
       </p>
     </div>
