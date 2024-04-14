@@ -37,7 +37,7 @@ export const RegisterModal = () => {
       });
 
       toast.success("Account created successfully!");
-      signIn("credentials", {
+      await signIn("credentials", {
         email,
         password,
       });
@@ -53,6 +53,7 @@ export const RegisterModal = () => {
     // console.log("hello world");
   }, [registerModal]);
 
+  // Modal Body
   const bodyContent = (
     <div className="flex flex-col gap-4 ">
       <Input
@@ -89,6 +90,7 @@ export const RegisterModal = () => {
     </div>
   );
 
+  // Modal Footer
   const footerContent = (
     <div className="text-primary text-center mt-4">
       <p className="w-full">

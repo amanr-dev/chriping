@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 import Layout from "@/Components/layout/Layout";
 import { LoginModal } from "@/Components/modals/LoginModal";
 import { RegisterModal } from "@/Components/modals/RegisterModal";
-import { Toaster } from "react-hot-toast";
 import SessionWrapper from "@/Components/SessionWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,7 +23,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <SessionWrapper>
           <Layout>
-            <Toaster position="top-right" />
             <LoginModal />
             <RegisterModal />
             {children}
