@@ -1,3 +1,4 @@
+"use client";
 import { IoHomeOutline, IoNotificationsOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { SidebarLogo } from "./layout/SidebarLogo";
@@ -5,13 +6,29 @@ import { SidebarLinks } from "./layout/SidebarLinks";
 import { CiLogout } from "react-icons/ci";
 import { SidebarTweetButton } from "./layout/SidebarTweetButton";
 import useCurrentUser from "@/hooks/useCurrentUser";
-import { signOut } from "next-auth/react";
+// import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useCallback } from "react";
 
 const Sidebar = () => {
+  const router = useRouter();
   // const { data: currentUser } = useCurrentUser();
 
-  const currentUser = false; //example user
+  const currentUser = true; //example user
+
+  const handleClick = useCallback(
+    (href: string) => {
+      if (href) {
+        router.push(href);
+      }
+    },
+    [router]
+  );
+
+  // Dummy signout
+  const signOut = () => {
+    alert("Sign Out");
+  };
 
   //Sidebar links
   const navLinks = [
@@ -28,7 +45,7 @@ const Sidebar = () => {
 
     {
       label: "Profile",
-      href: "/user/111",
+      href: "/user/:id",
       icon: CgProfile,
     },
   ];
@@ -47,6 +64,7 @@ const Sidebar = () => {
               href={links.href}
               label={links.label}
               icon={links.icon}
+              onClick={() => handleClick(links.href)}
             />
           ))}
           {currentUser && (
