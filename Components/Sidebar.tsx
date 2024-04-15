@@ -6,6 +6,7 @@ import { CiLogout } from "react-icons/ci";
 import { SidebarTweetButton } from "./layout/SidebarTweetButton";
 import useCurrentUser from "@/hooks/useCurrentUser";
 import { signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const Sidebar = () => {
   // const { data: currentUser } = useCurrentUser();
