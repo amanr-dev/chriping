@@ -4,8 +4,14 @@ import { SidebarLogo } from "./layout/SidebarLogo";
 import { SidebarLinks } from "./layout/SidebarLinks";
 import { CiLogout } from "react-icons/ci";
 import { SidebarTweetButton } from "./layout/SidebarTweetButton";
+import useCurrentUser from "@/hooks/useCurrentUser";
+import { signOut } from "next-auth/react";
 
 const Sidebar = () => {
+  // const { data: currentUser } = useCurrentUser();
+
+  const currentUser = false; //example user
+
   //Sidebar links
   const navLinks = [
     {
@@ -42,13 +48,13 @@ const Sidebar = () => {
               icon={links.icon}
             />
           ))}
-          <SidebarLinks
-            onClick={() => {
-              alert("You clicked");
-            }}
-            icon={CiLogout}
-            label="Logout"
-          />
+          {currentUser && (
+            <SidebarLinks
+              onClick={() => signOut()}
+              icon={CiLogout}
+              label="Logout"
+            />
+          )}
           <SidebarTweetButton />
         </div>
       </div>
