@@ -6,7 +6,7 @@ import { SidebarLinks } from "./layout/SidebarLinks";
 import { CiLogout } from "react-icons/ci";
 import { SidebarTweetButton } from "./layout/SidebarTweetButton";
 import useCurrentUser from "@/hooks/useCurrentUser";
-// import { signOut } from "next-auth/react";
+import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useCallback } from "react";
 
@@ -14,7 +14,7 @@ const Sidebar = () => {
   const router = useRouter();
   // const { data: currentUser } = useCurrentUser();
 
-  const currentUser = true; //example user
+  const currentUser = false; //example user
 
   const handleClick = useCallback(
     (href: string) => {
@@ -24,11 +24,6 @@ const Sidebar = () => {
     },
     [router]
   );
-
-  // Dummy signout
-  const signOut = () => {
-    alert("Sign Out");
-  };
 
   //Sidebar links
   const navLinks = [
