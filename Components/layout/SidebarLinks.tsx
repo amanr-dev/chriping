@@ -8,7 +8,7 @@ interface SidebarLinksProps {
   label: string;
   href?: string;
   icon: IconType;
-  handleClick?: () => void;
+
   onClick?: () => void;
 }
 
@@ -16,7 +16,7 @@ export const SidebarLinks: React.FC<SidebarLinksProps> = ({
   label,
   href,
   icon: Icon,
-  handleClick,
+
   onClick,
 }) => {
   // const router = useRouter();
@@ -34,12 +34,12 @@ export const SidebarLinks: React.FC<SidebarLinksProps> = ({
       </div>
       <div
         className="
-      relative
-      hidden
-      lg:flex
-      items-center
-      gap-4
-      p-4 rounded-full hover:bg-secondary hover:bg-opacity-10 cursor-pointer 
+          relative
+          hidden
+          lg:flex
+          items-center
+          gap-4
+          p-4 rounded-full hover:bg-secondary hover:bg-opacity-10 cursor-pointer 
 w-full
       "
       >
