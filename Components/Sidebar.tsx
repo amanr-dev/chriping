@@ -14,7 +14,7 @@ const Sidebar = () => {
   const router = useRouter();
   // const { data: currentUser } = useCurrentUser();
 
-  const currentUser = false; //example user
+  const currentUser = false; //dummy user
 
   const handleClick = useCallback(
     (href: string) => {
