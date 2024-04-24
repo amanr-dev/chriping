@@ -41,4 +41,12 @@ export default NextAuth({
       },
     }),
   ],
+  debug: process.env.NODE_ENV === "development",
+  session: {
+    strategy: "jwt",
+  },
+  jwt: {
+    secret: process.env.NEXT_JWT_SECRET,
+  },
+  secret: process.env.NEXT_AUTH_SECRET,
 });
