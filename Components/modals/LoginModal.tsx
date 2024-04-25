@@ -65,7 +65,7 @@ export const LoginModal = () => {
   const footerContent = (
     <div className="text-primary text-center mt-4">
       <p className="">
-        First time here??, go to
+        First time here?, Go to
         <span
           onClick={toggleModal}
           className="text-secondary cursor-pointer hover:underline"
