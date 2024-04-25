@@ -1,7 +1,6 @@
-"use server";
-
 import { NextApiRequest, NextApiResponse } from "next";
 import bcrypt from "bcrypt";
+import prisma from "@/libs/prismadb";
 
 export default async function handler(
   req: NextApiRequest,
@@ -12,9 +11,13 @@ export default async function handler(
   }
 
   try {
-    console.log("let me get the request value" + req);
+    console.log("Request Body:" + req.body);
 
     const { email, username, name, password } = req.body;
+
+    if (!email || !username || !name || !password) {
+      return res.status(400).json({ error: "Missing required fields" });
+    }
 
     const hashedPassword = await bcrypt.hash(password, 12);
 
