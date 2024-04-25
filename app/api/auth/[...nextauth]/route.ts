@@ -1,11 +1,9 @@
-"use server";
-
+import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import bcrypt from "bcrypt";
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
 import prisma from "@/libs/prismadb";
-import { PrismaAdapter } from "@next-auth/prisma-adapter";
 
 export default NextAuth({
   adapter: PrismaAdapter(prisma),
@@ -37,9 +35,8 @@ export default NextAuth({
         );
 
         if (!isCorrectPassword) {
-          throw new Error("Invalid Password");
+          throw new Error("Invalid Credentials");
         }
-
         return user;
       },
     }),
@@ -49,7 +46,7 @@ export default NextAuth({
     strategy: "jwt",
   },
   jwt: {
-    secret: process.env.NEXTAUTH_JWT_SECRET,
+    secret: process.env.NEXT_JWT_SECRET,
   },
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.NEXT_AUTH_SECRET,
 });
