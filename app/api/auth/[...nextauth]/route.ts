@@ -5,7 +5,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 
 import prisma from "@/libs/prismadb";
 
-const handler = NextAuth({
+export default NextAuth({
   adapter: PrismaAdapter(prisma),
   providers: [
     CredentialsProvider({
@@ -50,5 +50,3 @@ const handler = NextAuth({
   },
   secret: process.env.NEXT_AUTH_SECRET,
 });
-
-export { handler as GET, handler as POST };
