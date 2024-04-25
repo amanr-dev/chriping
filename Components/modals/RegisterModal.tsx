@@ -28,6 +28,7 @@ export const RegisterModal = () => {
   const onSubmit = useCallback(async () => {
     try {
       setIsLoding(true);
+      console.log("Inside onSubmit function");
 
       await axios.post("/api/register", {
         name,
