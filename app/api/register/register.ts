@@ -10,10 +10,10 @@ export default async function handler(
     return res.status(405).end();
   }
 
+  const { email, username, name, password } = req.body;
+
   try {
     console.log("Request Body:" + req.body);
-
-    const { email, username, name, password } = req.body;
 
     if (!email || !username || !name || !password) {
       return res.status(400).json({ error: "Missing required fields" });
