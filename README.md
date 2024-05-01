@@ -55,3 +55,25 @@ my-nextjs-app/
 │ └── Home.module.css # CSS module for Home page
 ├── package.json # npm package configuration
 └── README.md # Project documentation
+
+Explanation of key directories and files:
+
+pages/: Contains Next.js pages and API routes.
+index.js: Example Next.js page.
+api/: Directory for API routes.
+createUser.js: API route for creating a user and saving to the database.
+otherApiRoute.js: Additional API routes for your application.
+components/: Contains React components used in your application.
+Layout.js: Example layout component.
+LoginForm.js: Example component for a login form.
+lib/: Contains utility functions used across your application.
+dbConnect.js: Utility function to connect to your MongoDB database.
+models/: Contains Mongoose models representing data structures in your database.
+User.js: Mongoose model definition for the User schema.
+public/: Contains static assets that Next.js serves automatically.
+favicon.ico: Example favicon.
+styles/: Contains stylesheets for your components.
+globals.css: Global CSS styles.
+Home.module.css: CSS module specific to the Home page.
+package.json: npm package configuration file containing project dependencies and scripts.
+README.md: Project documentation.
