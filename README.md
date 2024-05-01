@@ -34,3 +34,24 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+my-nextjs-app/
+├── pages/
+│ ├── index.js # Example Next.js page
+│ ├── api/
+│ │ ├── createUser.js # API route for creating a user
+│ │ └── otherApiRoute.js # Additional API routes
+├── components/
+│ ├── Layout.js # Example React component (layout)
+│ └── LoginForm.js # Example React component (login form)
+├── lib/
+│ └── dbConnect.js # Database connection utility
+├── models/
+│ └── User.js # Mongoose model for User
+├── public/
+│ └── favicon.ico # Favicon
+├── styles/
+│ ├── globals.css # Global CSS styles
+│ └── Home.module.css # CSS module for Home page
+├── package.json # npm package configuration
+└── README.md # Project documentation
