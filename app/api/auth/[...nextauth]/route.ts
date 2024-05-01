@@ -14,11 +14,13 @@ const handler = NextAuth({
         email: { label: "email", type: "text" },
         password: { label: "password", type: "password" },
       },
+      // Authorize function
       async authorize(credentials) {
         if (!credentials?.email || !credentials.password) {
           throw new Error("Invalid Credentials");
         }
 
+        // Find the user
         const user = await prisma.user.findUnique({
           where: {
             email: credentials.email,
