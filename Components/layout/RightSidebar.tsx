@@ -24,7 +24,7 @@ export const RightSidebar = () => {
     <div className="px-6 py-4 hidden lg:block">
       <div className="rounded-full bg-slate-800 w-full flex items-center px-2 py-1 justify-center text-primary">
         <FaSearch />
-        <Input placeholder="Search..." type="text" border={false} />
+        <Input placeholder="Search..." type="text" outline={false} />
       </div>
       <div className="w-full h-[1px] bg-slate-800 my-4" />
       <div className="w-full flex items-start justify-start flex-col text-primary capitalize gap-2 text-base">
