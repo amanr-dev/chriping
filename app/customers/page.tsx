@@ -1,3 +1,3 @@
 export default function page() {
-  return <p>Hi Customers!</p>;
+  return <p>It's customers page!</p>;
 }
