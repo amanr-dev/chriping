@@ -40,23 +40,21 @@ import { NextResponse } from "next/server";
 // }
 
 export async function POST(request: Request) {
-  // const body = await request.json();
+  const body = await request.json();
 
-  // const { email, username, name, password } = body;
+  const { email, username, name, password } = body;
 
-  // const hashedPassword = await bcrypt.hash(password, 12);
+  const hashedPassword = await bcrypt.hash(password, 12);
 
-  // // Create User to db
-  // const user = await prisma.user.create({
-  //   data: {
-  //     email,
-  //     username,
-  //     name,
-  //     hashedPassword,
-  //   },
-  // });
+  // Create User to db
+  const user = await prisma.user.create({
+    data: {
+      email,
+      username,
+      name,
+      hashedPassword,
+    },
+  });
 
-  // return NextResponse.json(user);
-
-  console.log("Register route is working");
+  return NextResponse.json(user);
 }
