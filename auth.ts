@@ -14,7 +14,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         password: { label: "password", type: "password" },
       },
       // Authorize function
-
       async authorize(credentials) {
         if (!credentials?.email || !credentials.password) {
           throw new Error("Invalid Credentials");
@@ -30,6 +29,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         if (!user || !user?.hashedPassword) {
           throw new Error("Invalid Credentials");
         }
+
         const isCorrectPassword = await bcrypt.compare(
           credentials.password,
           user.hashedPassword
@@ -42,4 +42,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       },
     }),
   ],
+  debug: process.env.NODE_ENV === "development",
+  session: {
+    strategy: "jwt",
+  },
 });
