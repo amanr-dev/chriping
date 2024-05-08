@@ -20,6 +20,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         }
 
         //    Find the user
+
         const user = await prisma.user.findUnique({
           where: {
             email: credentials.email,
@@ -42,8 +43,4 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       },
     }),
   ],
-  debug: process.env.NODE_ENV === "development",
-  session: {
-    strategy: "jwt",
-  },
 });
