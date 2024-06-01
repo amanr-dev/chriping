@@ -5,7 +5,7 @@ import React, { useCallback, useState } from "react";
 import { Input } from "../Input";
 import { Modal } from "../Modal";
 import useRegisterModal from "@/hooks/useRegisterModal";
-import { signIn } from "next-auth/react";
+import { signIn } from "@/auth";
 
 export const LoginModal = () => {
   const loginModal = useLoginModal();

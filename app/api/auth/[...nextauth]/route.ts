@@ -58,5 +58,5 @@
 //   secret: process.env.NEXT_AUTH_SECRET,
 // });
 
-import { handlers } from "@/auth";
+import { handlers, signIn, auth, signOut } from "@/auth";
 export const { GET, POST } = handlers;
