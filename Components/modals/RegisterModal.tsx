@@ -50,8 +50,6 @@ export const RegisterModal = () => {
     } finally {
       setIsLoding(false);
     }
-
-    // console.log(name, email, password, username);
   }, [registerModal]);
 
   // Modal Body
