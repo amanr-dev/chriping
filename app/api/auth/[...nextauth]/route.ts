@@ -2,6 +2,7 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import bcrypt from "bcrypt";
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import jsonweb
 
 import prisma from "@/libs/prismadb";
 
@@ -58,8 +59,21 @@ export default NextAuth({
     encode: ({ secret, token }) => {},
     decode: async ({ secret, token }) => {},
   },
+  theme: {
+     colorScheme: 'dark',
+     logo: '/next.svg'
+  },
+  callbacks: {
+     async session({session}) {
+          
+     },
+     async signIn({user}) {
+
+     }
+  }
   secret: process.env.NEXT_AUTH_SECRET,
 });
 
 // import { handlers, signIn, auth, signOut } from "@/auth";
+import async from '../../../register/route';
 // export const { GET, POST } = handlers;
