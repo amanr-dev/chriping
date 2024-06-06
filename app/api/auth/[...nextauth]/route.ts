@@ -2,7 +2,7 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import bcrypt from "bcrypt";
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import jsonweb
+import jsonwebtoken from "jsonwebtoken"
 
 import prisma from "@/libs/prismadb";
 
