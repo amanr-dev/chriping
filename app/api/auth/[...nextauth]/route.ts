@@ -53,7 +53,10 @@ export default NextAuth({
     strategy: "jwt",
   },
   jwt: {
-    secret: process.env.NEXT_JWT_SECRET,
+    //     secret: process.env.NEXT_JWT_SECRET,
+
+    encode: ({ secret, token }) => {},
+    decode: async ({ secret, token }) => {},
   },
   secret: process.env.NEXT_AUTH_SECRET,
 });
