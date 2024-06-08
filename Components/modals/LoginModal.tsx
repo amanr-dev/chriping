@@ -42,22 +42,29 @@ export const LoginModal = () => {
   // Modal body content
   const bodyContent = (
     <div className="flex flex-col gap-4 ">
-      <Input
-        placeholder="Email"
-        onChange={(e) => setEmail(e.target.value)}
-        value={email}
-        disabled={isLoding}
-        type={"email"}
-        outline={true}
-      />
-      <Input
-        placeholder="Password"
-        onChange={(e) => setPassword(e.target.value)}
-        value={password}
-        disabled={isLoding}
-        type={"password"}
-        outline={true}
-      />
+      <form
+        action={async (formData) => {
+          console.log(formData);
+        }}
+      >
+        <Input
+          placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+          disabled={isLoding}
+          type={"email"}
+          outline={true}
+        />
+        <Input
+          placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
+          disabled={isLoding}
+          type={"password"}
+          outline={true}
+        />
+      </form>
+      <button type="submit">submit</button>
     </div>
   );
 
