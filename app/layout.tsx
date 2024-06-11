@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 import Layout from "@/Components/layout/Layout";
 import { LoginModal } from "@/Components/modals/LoginModal";
 import { RegisterModal } from "@/Components/modals/RegisterModal";
-// import SessionWrapper from "@/Components/SessionWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,13 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <SessionWrapper> */}
         <Layout>
           <LoginModal />
           <RegisterModal />
           {children}
         </Layout>
-        {/* </SessionWrapper> */}
       </body>
     </html>
   );
