@@ -7,7 +7,7 @@ import useRegisterModal from "@/hooks/useRegisterModal";
 import useLoginModal from "@/hooks/useLoginModal";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { signIn } from "@/auth";
+// import { signIn } from "@/auth";
 
 export const RegisterModal = () => {
   const registerModal = useRegisterModal();
@@ -30,18 +30,19 @@ export const RegisterModal = () => {
       setIsLoding(true);
       console.log("Inside onSubmit function");
 
-      await axios.post("/api/register", {
-        name,
-        username,
-        email,
-        password,
-      });
+      // await axios.post("/api/register", {
+      //   name,
+      //   username,
+      //   email,
+      //   password,
+      // });
 
-      toast.success("Account created successfully!");
-      await signIn("credentials", {
-        email,
-        password,
-      });
+      // toast.success("Account created successfully!");
+      // await signIn("credentials", {
+      //   email,
+      //   password,
+      // });
+      console.log(email, password);
 
       registerModal.onClose();
     } catch (error) {
