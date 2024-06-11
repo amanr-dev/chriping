@@ -28,7 +28,7 @@ export const RegisterModal = () => {
   const onSubmit = useCallback(async () => {
     try {
       setIsLoding(true);
-      console.log("Inside onSubmit function");
+      console.log(name, username, email, password);
 
       // await axios.post("/api/register", {
       //   name,
@@ -42,7 +42,6 @@ export const RegisterModal = () => {
       //   email,
       //   password,
       // });
-      console.log(email, password);
 
       registerModal.onClose();
     } catch (error) {
