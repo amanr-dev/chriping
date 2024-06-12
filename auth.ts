@@ -1,27 +1,39 @@
 import NextAuth from "next-auth";
 import bcrypt from "bcrypt";
-import credentials from "next-auth/providers/credentials";
+import Credentials from "next-auth/providers/credentials";
 import prisma from "@/libs/prismadb";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
-    credentials({
-      // You can specify which fields should be submitted, by adding keys to the `credentials` object.
-      // e.g. domain, username, password, 2FA token, etc.
+    Credentials({
       credentials: {
         email: {},
         password: {},
       },
+
       authorize: async (credentials: any) => {
-        // logic to salt and hash password
+        try {
+          let user = null;
 
-        // logic to verify if user exists
-        const user = credentials;
+          // logic to salt and hash password
+          const pwHash = bcrypt.hash(credentials?.password, 10);
 
-        console.log(credentials);
+          // logic to verify if user exists
 
-        // return user object with the their profile data
-        return user;
+          if (!user) {
+            throw new Error("User not found.");
+          }
+
+          // return json object with the user data
+          return user;
+        } catch (error) {
+          if (error) {
+            // Return `null` to indicate that the credentials are invalid
+            console.log(error);
+
+            return null;
+          }
+        }
       },
     }),
   ],
