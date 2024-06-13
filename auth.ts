@@ -13,7 +13,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
       authorize: async (credentials: any) => {
         try {
-          // logic to salt and hash password
           const pwHash = bcrypt.hash(credentials?.password, 10);
 
           // logic to verify if user exists
