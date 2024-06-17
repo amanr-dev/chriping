@@ -29,6 +29,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             email: credentials?.email as string,
           },
         });
+
+        if (!user) {
+          throw new Error("Invalid User!");
+        }
       },
     }),
   ],
