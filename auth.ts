@@ -23,6 +23,12 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         if (!credentials) {
           throw new Error("Please provide the credentials");
         }
+
+        const user = await prisma.user.findUnique({
+          where: {
+            email: credentials?.email as string,
+          },
+        });
       },
     }),
   ],
