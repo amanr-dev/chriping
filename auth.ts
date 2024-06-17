@@ -33,6 +33,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         if (!user) {
           throw new Error("Invalid User!");
         }
+
+        return user;
       },
     }),
   ],
