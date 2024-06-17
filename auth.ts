@@ -21,7 +21,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       },
       authorize: async (credentials) => {
         if (!credentials) {
-          throw new Error("Please provide credentials");
+          throw new Error("Please provide the credentials");
         }
       },
     }),
