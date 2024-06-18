@@ -83,7 +83,7 @@ export const LoginModal = () => {
     <Modal
       disabled={isLoding}
       isOpen={loginModal.isOpen}
-      title="Login"
+      title="Login to your account"
       actionLabel="Sign In"
       onClose={loginModal.onClose}
       onSubmit={onSubmit}
