@@ -38,6 +38,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       },
     }),
   ],
-
+  pages: "/login",
   secret: process.env.NEXT_AUTH_SECRET,
 });
