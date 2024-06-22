@@ -8,7 +8,7 @@ import { RegisterModal } from "@/Components/modals/RegisterModal";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Chirping Social App",
+  title: "Chirping",
   description: "A social media app for chirping social birds",
 };
 
