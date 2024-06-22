@@ -20,6 +20,7 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
         hashedPassword,
       },
     });
+    console.log(user);
 
     return user;
   } catch (error) {
