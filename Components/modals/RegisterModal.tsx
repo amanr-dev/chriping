@@ -30,29 +30,29 @@ export const RegisterModal = () => {
       setIsLoding(true);
       console.log(name, username, email, password);
 
-      // axios
-      //   .post("/api/register", {
-      //     name,
-      //     username,
-      //     email,
-      //     password,
-      //   })
-      //   .then(() => {
-      //     registerModal.onClose();
-      //   })
-      //   .catch((error) => {
-      //     console.log(error);
-      //   })
-      //   .finally(() => {
-      //     setIsLoding(false);
-      //   });
+      axios
+        .post("/api/register", {
+          name,
+          username,
+          email,
+          password,
+        })
+        .then(() => {
+          registerModal.onClose();
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+        .finally(() => {
+          setIsLoding(false);
+        });
 
-      // toast.success("Account created successfully!");
-      // ("use server");
-      // await signIn("credentials", {
-      //   email,
-      //   password,
-      // });
+      toast.success("Account created successfully!");
+      ("use server");
+      await signIn("credentials", {
+        email,
+        password,
+      });
 
       registerModal.onClose();
     } catch (error) {
