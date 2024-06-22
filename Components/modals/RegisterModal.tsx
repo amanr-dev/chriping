@@ -48,6 +48,7 @@ export const RegisterModal = () => {
         });
 
       toast.success("Account created successfully!");
+      ("use server");
       await signIn("credentials", {
         email,
         password,
