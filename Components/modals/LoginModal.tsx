@@ -75,6 +75,7 @@ export const LoginModal = () => {
           {" "}
           Sign Up
         </span>
+        page.
       </p>
     </div>
   );
