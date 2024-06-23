@@ -8,7 +8,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: PrismaAdapter(prisma),
   providers: [
     CredentialsProvider({
-      name: "Credentials",
+      name: "credentials",
       credentials: {
         email: {
           label: "Email",
@@ -20,7 +20,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         },
       },
       authorize: async (credentials) => {
-        if (!credentials) {
+        if (!credentials?.email || !credentials?.password) {
           throw new Error("Please provide the credentials");
         }
 
@@ -30,8 +30,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           },
         });
 
-        if (!user) {
-          throw new Error("Invalid User!");
+        if (!user || !user?.hashedPassword) {
+          throw new Error("Invalid Credentials!");
         }
 
         return user;
