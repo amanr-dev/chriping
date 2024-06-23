@@ -39,10 +39,16 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           user.hashedPassword as string
         );
 
+        if (!isCorrectPassword) {
+          throw new Error("Invalid Password!");
+        }
+
         return user;
       },
     }),
   ],
-
+  pages: {
+    signIn: "/",
+  },
   secret: process.env.NEXT_AUTH_SECRET,
 });
