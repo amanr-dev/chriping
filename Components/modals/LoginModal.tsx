@@ -25,6 +25,8 @@ export const LoginModal = () => {
   // Handle submit
   const onSubmit = useCallback(async () => {
     try {
+      // prettier-ignore
+      "use server"
       setIsLoding(true);
       await signIn("credentials", {
         email,
