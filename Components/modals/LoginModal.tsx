@@ -5,6 +5,7 @@ import React, { useCallback, useState } from "react";
 import { Input } from "../Input";
 import { Modal } from "../Modal";
 import useRegisterModal from "@/hooks/useRegisterModal";
+import { signIn } from "@/auth";
 
 export const LoginModal = () => {
   const loginModal = useLoginModal();
@@ -25,12 +26,12 @@ export const LoginModal = () => {
   const onSubmit = useCallback(async () => {
     try {
       // prettier-ignore
-      "use server"
+
       setIsLoding(true);
-      // await signIn("credentials", {
-      //   email,
-      //   password,
-      // });
+      await signIn("credentials", {
+        email,
+        password,
+      });
 
       console.log(email, password);
 
